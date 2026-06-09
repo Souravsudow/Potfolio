@@ -1,11 +1,12 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { usePageTitle } from '../hooks/usePageTitle';
+import { SEO } from '../components/SEO';
 import { FadeInSection } from '../utils/FadeInSection';
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { useEffect, useState } from "react";
 
+const CONTACT_DESCRIPTION = 'Get in touch with Sourav Kumar — software engineer, AI developer, and full-stack developer. Connect via email, LinkedIn, or book a call.';
+
 const Contact = () => {
-  usePageTitle('Contact');
   const [selectedEvent, setSelectedEvent] = useState<string | null>(null);
 
   const cardHoverVariants = {
@@ -111,6 +112,14 @@ const Contact = () => {
 
   return (
     <div>
+      <SEO
+        title="Contact"
+        description={CONTACT_DESCRIPTION}
+        keywords="contact Sourav Kumar, software engineer hire, AI developer contact, full stack developer freelance"
+        ogUrl="https://sourav.website/contact"
+        canonicalUrl="https://sourav.website/contact"
+      />
+
       <FadeInSection>
         <motion.h1 className="text-3xl font-bold">
           Contact

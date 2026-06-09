@@ -3,14 +3,22 @@ import { TypeAnimation } from 'react-type-animation';
 import SpotifyPlaying from '../components/SpotifyPlaying';
 import YouTubeLatest from '../components/YouTubeLatest';
 import FeaturedProjects from '../components/FeaturedProjects';
-import { usePageTitle } from '../hooks/usePageTitle';
+import { SEO } from '../components/SEO';
 import { FadeInSection } from '../utils/FadeInSection';
 
-const Home = () => {
-  usePageTitle('');  // Empty string for home page
+const HOME_DESCRIPTION = 'Portfolio of Sourav Kumar — a software engineer, AI developer, and full-stack developer. Explore projects, YouTube content, and connect for collaboration.';
 
+const Home = () => {
   return (
     <div>
+      <SEO
+        title="Home"
+        description={HOME_DESCRIPTION}
+        keywords="Sourav Kumar portfolio, software engineer portfolio, AI developer portfolio, full stack developer, React developer India"
+        ogUrl="https://sourav.website/"
+        canonicalUrl="https://sourav.website/"
+      />
+
       <FadeInSection>
         <section className="space-y-4">
           <motion.div

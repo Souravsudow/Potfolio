@@ -1,0 +1,9 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://sourav.website/sitemap.xml
+
+# Crawl delay for politeness
+Crawl-delay: 10
