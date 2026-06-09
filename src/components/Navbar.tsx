@@ -30,7 +30,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-2">
             <img
               src="https://raw.githubusercontent.com/phillip-che/phillipche-site/refs/heads/main/src/assets/icon/transparent.png"
-              alt="Phillip Che"
+              alt="Sourav AI"
               className="w-8 h-8"
             />
           </Link>
