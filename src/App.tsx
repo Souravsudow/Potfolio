@@ -10,6 +10,7 @@ import Contact from './pages/Contact';
 // import Gallery from './pages/Gallery';
 import ScrollToTop from './utils/ScrollToTop';
 import { Layout } from './components/Layout';
+import { BackgroundMusicProvider } from './context/BackgroundMusicContext';
 
 const pageVariants = {
   initial: {
@@ -52,6 +53,7 @@ const App = () => {
 
   return (
     <ThemeProvider>
+      <BackgroundMusicProvider>
       <Layout>
         <div className="flex flex-col min-h-screen">
           <Navbar />
@@ -90,6 +92,7 @@ const App = () => {
           <ScrollToTop />
         </div>
       </Layout>
+      </BackgroundMusicProvider>
     </ThemeProvider>
   );
 };

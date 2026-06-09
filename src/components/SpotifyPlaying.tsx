@@ -7,7 +7,7 @@ import { useTheme } from '../context/ThemeContext';
 
 type TrackListType = 'recent' | 'top';
 
-const SpotifyPlaying = () => {
+const SpotifyPlaying = ({ showTabs = true }: { showTabs?: boolean }) => {
   const { currentTrack, recentTracks, topTracks } = useSpotify();
   const [activeList, setActiveList] = useState<TrackListType>('recent');
   const [displayTrack, setDisplayTrack] = useState<any>(null);
@@ -64,45 +64,47 @@ const SpotifyPlaying = () => {
   return (
     <div className="w-full">
       {/* Header with title and buttons */}
-      <div className={`mb-4 ${displayTrack ? 'hidden sm:block' : 'block'}`}>
-        <div className="flex justify-between items-center">
-          <h2 className="text-lg font-semibold">
-            {currentTrack 
-              ? 'Now Playing'
-              : (activeList === 'top' ? '#1 Track This Month' : 'Recently Played')}
-          </h2>
-          <div className="flex space-x-2">
-            <button
-              onClick={() => handleTabClick('recent')}
-              className={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
-                activeList === 'recent'
-                  ? 'text-gray-900 dark:text-white font-medium'
-                  : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
-              }`}
-              style={{ 
-                backgroundColor: activeList === 'recent' ? currentTheme.nav.bubble : 'transparent',
-                transition: 'background-color 0.2s ease-in-out'
-              }}
-            >
-              Recently Played
-            </button>
-            <button
-              onClick={() => handleTabClick('top')}
-              className={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
-                activeList === 'top'
-                  ? 'text-gray-900 dark:text-white font-medium'
-                  : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
-              }`}
-              style={{ 
-                backgroundColor: activeList === 'top' ? currentTheme.nav.bubble : 'transparent',
-                transition: 'background-color 0.2s ease-in-out'
-              }}
-            >
-              Top Tracks
-            </button>
+      {showTabs && (
+        <div className={`mb-4 ${displayTrack ? 'hidden sm:block' : 'block'}`}>
+          <div className="flex justify-between items-center">
+            <h2 className="text-lg font-semibold">
+              {currentTrack 
+                ? 'Now Playing'
+                : (activeList === 'top' ? '#1 Track This Month' : 'Recently Played')}
+            </h2>
+            <div className="flex space-x-2">
+              <button
+                onClick={() => handleTabClick('recent')}
+                className={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
+                  activeList === 'recent'
+                    ? 'text-gray-900 dark:text-white font-medium'
+                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+                }`}
+                style={{ 
+                  backgroundColor: activeList === 'recent' ? currentTheme.nav.bubble : 'transparent',
+                  transition: 'background-color 0.2s ease-in-out'
+                }}
+              >
+                Recently Played
+              </button>
+              <button
+                onClick={() => handleTabClick('top')}
+                className={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
+                  activeList === 'top'
+                    ? 'text-gray-900 dark:text-white font-medium'
+                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+                }`}
+                style={{ 
+                  backgroundColor: activeList === 'top' ? currentTheme.nav.bubble : 'transparent',
+                  transition: 'background-color 0.2s ease-in-out'
+                }}
+              >
+                Top Tracks
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      )}
       
       <div className="flex flex-col md:flex-row md:gap-4">
         {/* Main Track Display */}
@@ -133,38 +135,40 @@ const SpotifyPlaying = () => {
                     className="hidden sm:block w-full"
                   />
                   {/* Mobile Buttons - Only shown when track is playing */}
-                  <div className="mt-4 sm:hidden">
-                    <div className="flex space-x-2">
-                      <button
-                        onClick={() => handleTabClick('recent')}
-                        className={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
-                          activeList === 'recent'
-                            ? 'text-gray-900 dark:text-white font-medium'
-                            : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
-                        }`}
-                        style={{ 
-                          backgroundColor: activeList === 'recent' ? currentTheme.nav.bubble : 'transparent',
-                          transition: 'background-color 0.2s ease-in-out'
-                        }}
-                      >
-                        Recently Played
-                      </button>
-                      <button
-                        onClick={() => handleTabClick('top')}
-                        className={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
-                          activeList === 'top'
-                            ? 'text-gray-900 dark:text-white font-medium'
-                            : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
-                        }`}
-                        style={{ 
-                          backgroundColor: activeList === 'top' ? currentTheme.nav.bubble : 'transparent',
-                          transition: 'background-color 0.2s ease-in-out'
-                        }}
-                      >
-                        Top Tracks
-                      </button>
+                  {showTabs && (
+                    <div className="mt-4 sm:hidden">
+                      <div className="flex space-x-2">
+                        <button
+                          onClick={() => handleTabClick('recent')}
+                          className={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
+                            activeList === 'recent'
+                              ? 'text-gray-900 dark:text-white font-medium'
+                              : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+                          }`}
+                          style={{ 
+                            backgroundColor: activeList === 'recent' ? currentTheme.nav.bubble : 'transparent',
+                            transition: 'background-color 0.2s ease-in-out'
+                          }}
+                        >
+                          Recently Played
+                        </button>
+                        <button
+                          onClick={() => handleTabClick('top')}
+                          className={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
+                            activeList === 'top'
+                              ? 'text-gray-900 dark:text-white font-medium'
+                              : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+                          }`}
+                          style={{ 
+                            backgroundColor: activeList === 'top' ? currentTheme.nav.bubble : 'transparent',
+                            transition: 'background-color 0.2s ease-in-out'
+                          }}
+                        >
+                          Top Tracks
+                        </button>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </>
               )}
             </motion.div>

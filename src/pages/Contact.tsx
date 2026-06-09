@@ -78,19 +78,19 @@ const Contact = () => {
 
   const eventTypes = [
     {
-      id: "phillip-che/15-minutes-chat-with-me",
+      id: "sourav-kumar-jimc9f/15min",
       title: "15 Min Chat",
       description: "Quick chat",
       duration: "15 min"
     },
     {
-      id: "phillip-che/30-minutes-chat-with-me",
+      id: "sourav-kumar-jimc9f/30min",
       title: "30 Min Chat",
       description: "Standard meeting",
       duration: "30 min"
     },
     {
-      id: "phillip-che/60-minutes-chat-with-me",
+      id: "sourav-kumar-jimc9f/60-min-meeting",
       title: "60 Min Chat",
       description: "In-depth conversation",
       duration: "60 min"
@@ -101,8 +101,9 @@ const Contact = () => {
     (async function () {
       const cal = await getCalApi();
       cal("ui", {
-        "styles": {
-          "branding": { "brandColor": "#000000" }
+        "cssVarsPerTheme": {
+          "light": { "cal-brand": "#000000" },
+          "dark": { "cal-brand": "#ffffff" }
         }
       });
     })();
