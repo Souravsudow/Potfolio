@@ -21,7 +21,7 @@ export const projects: ProjectData[] = [
       { name: "AWS", color: "orange" }
     ],
     link: "https://www.mockstar.in",
-    previewImage: "src/assets/images/Screenshot 2026-06-05 at 3.39.57 PM.png"
+    previewImage: "/images/Screenshot 2026-06-05 at 3.39.57 PM.png"
   },
   {
     slug: "lerno-ai-learning-platform",
@@ -34,7 +34,7 @@ export const projects: ProjectData[] = [
       { name: "FastAPI", color: "emerald" }
     ],
     link: "https://deployment-adaa.vercel.app",
-    previewImage: "src/assets/images/Screenshot 2026-06-05 at 3.44.21 PM.png"
+    previewImage: "/images/Screenshot 2026-06-05 at 3.44.21 PM.png"
   },
   {
     slug: "make-it-sours-ai-resume-formatter",
@@ -47,6 +47,6 @@ export const projects: ProjectData[] = [
       { name: "Redis", color: "red" }
     ],
     link: "https://make-it-sour-ss.netlify.app",
-    previewImage: "src/assets/images/Screenshot 2026-06-05 at 3.48.03 PM.png"
+    previewImage: "/images/Screenshot 2026-06-05 at 3.48.03 PM.png"
   }
 ];
