@@ -70,7 +70,7 @@ export const sections = [
     )
   },
   {
-    title: "Clients",
+    title: "Clients Projects",
     content: (
       <div className="space-y-4">
         {clients.map((client) => (
