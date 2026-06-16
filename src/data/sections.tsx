@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { Project } from '../components/Project';
+import { ClientCard } from '../components/ClientCard';
 import { HobbiesSection } from '../components/HobbiesSection';
 import { projects } from '../data/projects';
+import { clients } from '../data/clients';
 
 export const sections = [
   {
@@ -63,6 +65,16 @@ export const sections = [
       <div className="space-y-4">
         {projects.map((project) => (
           <Project key={project.title} project={project} />
+        ))}
+      </div>
+    )
+  },
+  {
+    title: "Clients",
+    content: (
+      <div className="space-y-4">
+        {clients.map((client) => (
+          <ClientCard key={client.name} client={client} />
         ))}
       </div>
     )
