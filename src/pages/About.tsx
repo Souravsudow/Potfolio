@@ -46,6 +46,7 @@ const About = () => {
       <FadeInSection delay={0.4}>
         <AboutSection />
       </FadeInSection>
+
     </div>
   );
 };

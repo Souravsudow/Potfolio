@@ -42,6 +42,7 @@ export const Layout = ({ children }: LayoutProps) => {
 
       {/* Background Music Control */}
       <BackgroundMusicControl />
+
     </div>
   );
 };
