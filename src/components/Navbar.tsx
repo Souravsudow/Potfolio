@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
 import { useState, useEffect } from 'react';
 import { theme } from '../styles/theme';
-import logoIcon from '../assets/icon/transparent.png';
+import logoIcon from '../assets/icon/logo-face.jpg';
 
 const Navbar = () => {
   const { isDarkMode, toggleTheme } = useTheme();
@@ -33,7 +33,7 @@ const Navbar = () => {
             <img
               src={logoIcon}
               alt="Sourav AI"
-              className="w-8 h-8"
+              className="w-8 h-8 rounded-full object-cover"
             />
           </Link>
 
