@@ -29,7 +29,7 @@ const Home = () => {
           >
             <TypeAnimation
               sequence={[
-                'hello, Sourav',
+                'Hi, I am Sourav Kumar',
               ]}
               wrapper="h1"
               cursor={true}

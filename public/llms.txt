@@ -1,0 +1,16 @@
+# Sourav Kumar — Software Engineer & AI Developer
+
+> Portfolio of Sourav Kumar — a software engineer, AI developer, and full-stack developer building web applications with React, TypeScript, and Node.js. Also documents the journey on YouTube.
+
+- Projects: Mockstar (AI interview platform), LERNO (AI-driven learning platform), Make It Sour's (AI resume formatter)
+- YouTube: https://www.youtube.com/@sourav-u6t7w
+- GitHub: https://github.com/Souravsudow
+- LinkedIn: https://www.linkedin.com/in/sourav-kumar08/
+- Contact: souravkumar8oct@gmail.com
+
+## Pages
+
+- Home: https://sourav.website/
+- About: https://sourav.website/about
+- Achievements: https://sourav.website/achievements
+- Contact: https://sourav.website/contact

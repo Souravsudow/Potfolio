@@ -11,7 +11,7 @@ interface SEOProps {
 
 const SITE_NAME = 'Sourav Kumar';
 const BASE_URL = 'https://sourav.website';
-const DEFAULT_OG_IMAGE = 'https://raw.githubusercontent.com/phillip-che/phillipche-site/refs/heads/main/src/assets/icon/preview.jpeg';
+const DEFAULT_OG_IMAGE = 'https://sourav.website/og-image.jpg';
 
 export const SEO = ({
   title,

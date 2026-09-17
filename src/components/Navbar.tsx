@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
 import { useState, useEffect } from 'react';
 import { theme } from '../styles/theme';
+import logoIcon from '../assets/icon/transparent.png';
 
 const Navbar = () => {
   const { isDarkMode, toggleTheme } = useTheme();
@@ -30,7 +31,7 @@ const Navbar = () => {
           {/* Added Logo/Icon */}
           <Link to="/" className="flex items-center space-x-2">
             <img
-              src="https://raw.githubusercontent.com/phillip-che/phillipche-site/refs/heads/main/src/assets/icon/transparent.png"
+              src={logoIcon}
               alt="Sourav AI"
               className="w-8 h-8"
             />

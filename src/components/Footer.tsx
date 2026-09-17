@@ -31,7 +31,7 @@ const Footer = () => {
     },
     {
       name: 'Email',
-      url: 'mailto:souravkumar8oct@gmial.com',
+      url: 'mailto:souravkumar8oct@gmail.com',
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
           <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
